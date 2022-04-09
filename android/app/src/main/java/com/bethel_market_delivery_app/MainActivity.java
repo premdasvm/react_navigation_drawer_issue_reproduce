@@ -4,8 +4,6 @@ import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.ReactRootView;
 import android.os.Bundle;
-import com.facebook.react.bridge.JSIModulePackage; // <- add
-import com.swmansion.reanimated.ReanimatedJSIModulePackage;
 
 public class MainActivity extends ReactActivity {
 
@@ -32,11 +30,6 @@ public class MainActivity extends ReactActivity {
   @Override
   protected ReactActivityDelegate createReactActivityDelegate() {
     return new MainActivityDelegate(this, getMainComponentName());
-  }
-
-  @Override
-  protected JSIModulePackage getJSIModulePackage() {
-    return new ReanimatedJSIModulePackage();
   }
 
   public static class MainActivityDelegate extends ReactActivityDelegate {
